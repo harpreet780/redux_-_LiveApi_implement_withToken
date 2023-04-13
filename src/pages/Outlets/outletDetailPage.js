@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { OUTLET_DETAIL } from '../redux/actions/action';
+import { OUTLET_DETAIL } from '../../redux/actions/action';
 
 const OutletDetailPage = () => {
     const navigate = useNavigate();

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Input, Label } from 'reactstrap'
-import { SUBMIT_LOGIN_DATA } from '../redux/actions/action'
-import { loginApi } from '../api/allApi'
+import { SUBMIT_LOGIN_DATA } from '../../redux/actions/action'
+import { loginApi } from '../../api/allApi'
 import { useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {

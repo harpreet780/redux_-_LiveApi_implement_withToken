@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import {  OUTLET_DETAIL, UPDATE_OUTLETS } from '../redux/actions/action';
+import {  OUTLET_DETAIL, UPDATE_OUTLETS } from '../../redux/actions/action';
 import { Input, Label } from 'reactstrap';
-import { updateOutletApi } from '../api/allApi';
+import { updateOutletApi } from '../../api/allApi';
 
 const EditOutlets = () => {
   const navigate = useNavigate();

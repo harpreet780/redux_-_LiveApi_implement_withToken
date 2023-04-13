@@ -2,8 +2,8 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Input, Label } from 'reactstrap';
-import { ADD_OUTLETS, SUBMIT_OUTLETS } from '../redux/actions/action';
-import { addOutlets } from '../api/allApi';
+import { ADD_OUTLETS } from '../../redux/actions/action';
+import { addOutlets } from '../../api/allApi';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -29,7 +29,15 @@ const Dashboard = () => {
 
     return (
         <div className='p-3'>
-            <div className='d-flex justify-content-end'>
+            <div className='d-flex justify-content-between'>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <button className='submitBtn '
+                            onClick={() => navigate('/outletLogin')}
+                        >
+                            Outlet Login
+                        </button>
+                    </div>
+                <div className='d-flex justify-content-center'>
                 <button className='submitBtn m-0' onClick={() => navigate('/profile')}>Profile</button>
                 <button className='submitBtn m-0' onClick={() => {
                     localStorage.clear();
@@ -37,6 +45,7 @@ const Dashboard = () => {
                 }}>
                     Logout
                 </button>
+                </div>
             </div>
             <div className="pageWrapper">
                 <div className="formWrap">

@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Input, Label } from 'reactstrap';
-import { UPDATE_PROFILE } from '../redux/actions/action';
-import { updateProfileApi } from '../api/allApi';
+import { UPDATE_PROFILE } from '../../redux/actions/action';
+import { updateProfileApi } from '../../api/allApi';
 
 const Profile = () => {
     const navigate = useNavigate()

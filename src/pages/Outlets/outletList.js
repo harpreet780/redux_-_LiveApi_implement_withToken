@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { fecthOutletList, updateOutletApi } from '../api/allApi';
+import { fecthOutletList, updateOutletApi } from '../../api/allApi';
 import { MdModeEditOutline } from "react-icons/md";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
-import { OUTLET_LIST } from '../redux/actions/action';
+import { OUTLET_LIST } from '../../redux/actions/action';
 import { useDispatch, useSelector } from 'react-redux';
 
 const OutletList = () => {
@@ -45,13 +45,22 @@ const OutletList = () => {
         <div>
             <div className='p-3'>
                 <h2 className='text-center'>Outlets List</h2>
-                <div className='d-flex justify-content-end'>
+                <div className='d-flex justify-content-between'>
+                   <div>
+                    <button className='submitBtn m-0' onClick={() => {
+                       navigate('/outletLogin')
+                    }}>
+                        Login Outlets 
+                    </button>
+                    </div> 
+                    <div>
                     <button className='submitBtn m-0' onClick={() => {
                         localStorage.clear();
                         navigate('/login')
                     }}>
                         Logout
                     </button>
+                    </div> 
                 </div>
                 <table className='table mt-5'>
                     <thead>
